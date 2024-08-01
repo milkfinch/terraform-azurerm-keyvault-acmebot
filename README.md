@@ -1,16 +1,14 @@
-# Key Vault Acmebot Terraform module
+# Key Vault Acmebot Terraform module Fork
 
-[![Validate](https://github.com/shibayan/terraform-azurerm-keyvault-acmebot/actions/workflows/validate.yml/badge.svg)](https://github.com/shibayan/terraform-azurerm-keyvault-acmebot/actions/workflows/validate.yml)
-[![Release](https://badgen.net/github/release/shibayan/terraform-azurerm-keyvault-acmebot)](https://github.com/shibayan/terraform-azurerm-keyvault-acmebot/releases/latest)
-[![License](https://badgen.net/github/license/shibayan/terraform-azurerm-keyvault-acmebot)](https://github.com/shibayan/terraform-azurerm-keyvault-acmebot/blob/master/LICENSE)
-[![Terraform Registry](https://badgen.net/badge/terraform/registry/5c4ee5)](https://registry.terraform.io/modules/shibayan/keyvault-acmebot/azurerm/latest)
+Original: https://github.com/shibayan/terraform-azurerm-keyvault-acmebot
+
+I had to change it to use pre-existing logws + appinsight + storageaccount if they are specified
 
 ## Usage
 
 ```hcl
 module "keyvault_acmebot" {
-  source  = "shibayan/keyvault-acmebot/azurerm"
-  version = "~> 3.0"
+  source  = "https://github.com/milkfinch/terraform-azurerm-keyvault-acmebot//"
 
   app_base_name         = "acmebot-module"
   resource_group_name   = azurerm_resource_group.default.name
